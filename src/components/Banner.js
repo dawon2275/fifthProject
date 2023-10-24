@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Banner = () => {
-    //console.log(movie)
   return (
     <div>
       <div className='leftMenu'>
