@@ -11,7 +11,7 @@ const Movies = () => {
     return(
 
     <>
-      <div class="login">
+      <div className="login">
       <h2>서비스 이용을 위한 로그인이 필요합니다.</h2>
       <form>
           <input type="text" placeholder='아이디'/>
