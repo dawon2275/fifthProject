@@ -7,11 +7,12 @@ const MovieDetail = () => {
   let [showDetail, setShowDetail] = useState({});
   const API_KEY = process.env.REACT_APP_API_KEY;
   let {id} = useParams();
+
   const detail = async() => {
     let url = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`;
     let response = await fetch(url);
     let data = await response.json();
-    setShowDetail(data);
+    //setShowDetail(data);
   }
   useEffect(()=> {
     detail();

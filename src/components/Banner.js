@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Banner = () => {
+const Banner = ({ movie }) => {
   return (
     <div>
       <div className='leftMenu'>
@@ -21,13 +21,14 @@ const Banner = () => {
       <div className='tvLogo'><img src='img/tvLogo.webp'></img></div>
       <div style={{
         
-        backgroundImage: "url(" + `https://image.tmdb.org/t/p/w1920_and_h600_multi_faces/pHpHEsBGqdRLsevBw90YNsRVAKp.jpg` + ")"}}className='banner'>
-
-    <div className="banner-info">
-
-        <h1>2023년 최악의 범죄 조직이 온다!</h1>
-        <h3>지금 왓챠에서만 플레이 하세요!</h3>
-      </div>
+        backgroundImage: "url(" + `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${movie.poster_path}` + ")"
+      }} className='banner'>
+        <div className="banner-info">
+              <h1>{movie.title}</h1>
+              <p>{movie.overview}</p>
+          {/* <h1>2023년 최악의 범죄 조직이 온다!</h1>
+          <h3>지금 왓챠에서만 플레이 하세요!</h3> */}
+        </div>
     </div>
     </div>
   )

@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const Movies = () => {
     const Rest_api_key='c878b55d4fc1d6605ffb419c0caabb99' //REST API KEY
     const redirect_uri = 'http://localhost:3000/movies' //Redirect URI
@@ -12,18 +11,14 @@ const Movies = () => {
     return(
 
     <>
-      <div className='login'>
-        <h2>
-          <img className='whatcha' width={400}  src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd05ded51-54bf-4174-8b7e-e021c6eb6b5a%2FWATCHA_LOGO.svg&blockId=400d70c6-5698-4877-9ddf-83be123fb341" alt="logo" ></img></h2>
-          <input type='text' placeholder='아이디 또는 이메일을 입력하세요.'></input>
-          <input type='text' placeholder='패스워드를 입력하세요.'></input>
-        
-        
-        <button onClick={handleLogin}>
-          <img src='img/kakao.png'></img>
-        </button>
-        <button >신규가입</button>
-      </div>
+      <div class="login">
+      <h2>서비스 이용을 위한 로그인이 필요합니다.</h2>
+      <form>
+          <input type="text" placeholder='아이디'/>
+          <input type="password" placeholder='비밀번호'/>
+      </form>
+      <button onClick={handleLogin}></button>
+    </div>
     </>
     )
   
