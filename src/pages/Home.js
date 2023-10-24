@@ -24,7 +24,7 @@ const Home = () => {
   }
 
   return (
-    <div Banner movie={popularMovies.results[0]}>
+    <div>
       <Banner/>
         {<div className='contents'>
           <h2 className='mainTitle'>추천 해외 드라마</h2>
