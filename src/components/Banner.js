@@ -1,6 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
-const Banner = () => {
+const Banner = ({ movie }) => {
+  const {genreList} = useSelector(state => state.movie)
     //console.log(movie)
   return (
     <div>
@@ -25,6 +27,13 @@ const Banner = () => {
         backgroundImage: "url(" + `https://image.tmdb.org/t/p/w1920_and_h600_multi_faces/pHpHEsBGqdRLsevBw90YNsRVAKp.jpg` + ")"}}className='banner'>
 
     <div className="banner-info">
+        <div className="genre">
+          {movie.genre_ids.map((id, idx)=>
+            <span className="badge" key={idx}>
+              {genreList.find(movie=> movie.id==id).name}
+            </span>
+          )}
+        </div>
 
         <h1>2023년 최악의 범죄 조직이 온다!</h1>
         <h3>지금 왓챠에서만 플레이 하세요!</h3>
