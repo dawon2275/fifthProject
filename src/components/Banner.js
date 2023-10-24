@@ -21,7 +21,7 @@ const Banner = ({ movie }) => {
       <div className='tvLogo'><img src='img/tvLogo.webp'></img></div>
       <div style={{
         
-        backgroundImage: "url(" + `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${movie.poster_path}` + ")"
+        backgroundImage: "url(" + `https://www.themoviedb.org/t/p/original/qUlqIgWQdTVrFbCJxhVBJL02VAZ.jpg` + ")"
       }} className='banner'>
         <div className="banner-info">
               <h1>{movie.title}</h1>
